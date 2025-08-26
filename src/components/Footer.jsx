@@ -1,7 +1,16 @@
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-center p-4 mt-6">
-      <p className="text-gray-600">© {new Date().getFullYear()} RDB Reviews. All rights reserved.</p>
-    </footer>
+    <motion.footer
+      className="bg-blue-900 text-white text-center p-6 mt-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <p className="text-sm">
+        © {new Date().getFullYear()} Rwanda Development Board Reviews. All rights reserved.
+      </p>
+    </motion.footer>
   );
 }
